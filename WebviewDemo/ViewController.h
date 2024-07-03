@@ -6,10 +6,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <WebKit/WebKit.h>
 
-@interface ViewController : UIViewController <UIWebViewDelegate>
-@property (weak, nonatomic) IBOutlet UIWebView *webView;
-
+@interface ViewController : UIViewController <WKScriptMessageHandler, WKNavigationDelegate>
+@property (weak, nonatomic) IBOutlet WKWebView *webView;
+@property(nonatomic) BOOL allowsInlineMediaPlayback;
 
 @end
 
